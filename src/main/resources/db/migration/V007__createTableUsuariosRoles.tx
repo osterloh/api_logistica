@@ -1,0 +1,10 @@
+CREATE TABLE usuarios_roles(
+	usuario_id int not null,
+	role_id varchar(60) not null
+);
+
+ALTER TABLE usuarios_roles ADD CONSTRAINT fk_usuario
+FOREIGN KEY (usuario_id) REFERENCES usuario (id);
+
+ALTER TABLE usuarios_roles ADD CONSTRAINT fk_role
+FOREIGN KEY (role_id) REFERENCES role (nome_role);
