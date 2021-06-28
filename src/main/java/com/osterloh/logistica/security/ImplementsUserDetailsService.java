@@ -27,8 +27,8 @@ public class ImplementsUserDetailsService implements UserDetailsService {
 		}
 
 		return new User(
-				usuario.getUsername(),
-				usuario.getPassword(),
+				usuario.getEmail(),
+				usuario.getSenha(),
 				true,
 				true,
 				true,
